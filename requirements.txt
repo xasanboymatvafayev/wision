@@ -1,0 +1,9 @@
+telethon==1.34.0
+requests==2.31.0
+aiohttp==3.9.3
+pillow==10.2.0
+deep-translator==1.11.4
+selenium==4.17.2
+webdriver-manager==4.0.1
+instaloader==4.10
+python-dotenv==1.0.1
