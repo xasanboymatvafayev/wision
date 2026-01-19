@@ -3,31 +3,37 @@ import os
 import tempfile
 import requests
 from io import BytesIO
+import sys
+
+# bot-project papkasini Python yo‘liga qo‘shamiz
+sys.path.append(os.path.join(os.path.dirname(__file__), "bot-project"))
 
 from telethon import TelegramClient, events
 
 from config import API_ID, API_HASH, BOT_TOKEN
 
-from bot-project.event_handlers import (
+# ⚠️ E’TIBOR: bu yerda bot-project YO‘Q
+from event_handlers import (
     handle_start_message,
     handle_phone,
     handle_code_input,
     handle_password
 )
 
-from bot-project.client_handler import (
+from client_handler import (
     user_sessions,
     start_client,
     login_client
 )
 
-from bot-project.clock_handler import handle_setclock, handle_clockoff
-from bot-project.help import handle_help_message
-from bot-project.instadown import download_instagram_post, clean_download_folder
-from bot-project.profile_image_clock import start_imgclock, stop_imgclock
-from bot-project.anime_information import get_anime_info_and_image
-from bot-project.github_downloader import gitdown_handler
-from bot-project.redown import handle_redown
+from clock_handler import handle_setclock, handle_clockoff
+from help import handle_help_message
+from instadown import download_instagram_post, clean_download_folder
+from profile_image_clock import start_imgclock, stop_imgclock
+from anime_information import get_anime_info_and_image
+from github_downloader import gitdown_handler
+from redown import handle_redown
+
 
 
 
