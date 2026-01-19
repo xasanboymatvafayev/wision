@@ -1,21 +1,34 @@
 import asyncio
 import os
-from telethon import TelegramClient, events
+import tempfile
 import requests
 from io import BytesIO
-import tempfile
+
 from telethon import TelegramClient, events
 
 from config import API_ID, API_HASH, BOT_TOKEN
-from event_handlers import handle_start_message, handle_phone, handle_code_input, handle_password
-from client_handler import user_sessions, start_client, login_client
-from clock_handler import handle_setclock, handle_clockoff  
-from help import handle_help_message
-from instadown import download_instagram_post, clean_download_folder
-from profile_image_clock import start_imgclock, stop_imgclock 
-from anime_information import get_anime_info_and_image
-from github_downloader import gitdown_handler
-from redown import handle_redown
+
+from bot_project.event_handlers import (
+    handle_start_message,
+    handle_phone,
+    handle_code_input,
+    handle_password
+)
+
+from bot_project.client_handler import (
+    user_sessions,
+    start_client,
+    login_client
+)
+
+from bot_project.clock_handler import handle_setclock, handle_clockoff
+from bot_project.help import handle_help_message
+from bot_project.instadown import download_instagram_post, clean_download_folder
+from bot_project.profile_image_clock import start_imgclock, stop_imgclock
+from bot_project.anime_information import get_anime_info_and_image
+from bot_project.github_downloader import gitdown_handler
+from bot_project.redown import handle_redown
+
 
 
 async def main():
